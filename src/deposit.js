@@ -1,3 +1,7 @@
+import {UserContext} from './context';
+import Card from './context';
+import React from 'react';
+
 function Deposit(){
   const [show, setShow]               = React.useState(true);
   const [status, setStatus]           = React.useState('');
@@ -62,3 +66,5 @@ function Deposit(){
     />
   );
 }
+
+export default Deposit();

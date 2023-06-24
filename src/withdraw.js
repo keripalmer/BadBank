@@ -1,3 +1,8 @@
+import Card from './context';
+import UserContext from './context';
+import React from 'react';
+
+
 function Withdraw(){
   const [show, setShow]               = React.useState(true);
   const [status, setStatus]           = React.useState('');
@@ -76,3 +81,4 @@ function Withdraw(){
     />
   );
 }
+export default Withdraw();

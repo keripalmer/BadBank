@@ -1,3 +1,16 @@
+import NavBar from './navbar.js';
+import Home from './home';
+import CreateAccount from './createaccount.js'
+import Login from './login.js';
+import Deposit from './deposit.js'
+import Withdraw from './withdraw.js';
+import {Balance} from './balance.js';
+import AllData from './alldata.js';
+import {UserContext} from './context';
+import {Route} from './context';
+import {HashRouter} from './context';
+import React,{ReactDOM} from 'react';
+
 function Spa() {
   return (
     <HashRouter>
