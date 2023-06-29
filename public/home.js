@@ -1,4 +1,3 @@
-import Card from './context';
 
 
 function Home(){
@@ -12,4 +11,3 @@ function Home(){
       />    
     );  
   }
-  export default Home();

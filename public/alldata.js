@@ -1,5 +1,3 @@
-import {UserContext} from './context';
-import React from 'react';
 
 function AllData() {
   const { users, balance } = React.useContext(UserContext);
@@ -30,4 +28,3 @@ function AllData() {
   );
 }
 
-export default AllData();

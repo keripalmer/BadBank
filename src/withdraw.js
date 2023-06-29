@@ -1,27 +1,11 @@
-import Card from './context';
-import UserContext from './context';
-import React from 'react';
-
-
 function Withdraw(){
   const [show, setShow]               = React.useState(true);
   const [status, setStatus]           = React.useState('');
   const [withdrawAmt, setWithdrawAmt] = React.useState();
-  const [inputValue, setInputValue]   = React.useState('');
   const ctx                           = React.useContext(UserContext);
   let lastUser                        = ctx.users.length-1;
   let balance                         = ctx.users[lastUser].balance;
   
-  function withdraw (e){
-    console.log("value =",  e.currentTarget.value)
-   
-    setWithdrawAmt(e.currentTarget.value)
-   // <input onChange={e => this.setState({ value: e.target.value })} value={this.inputValue} />
-   setInputValue( e.currentTarget.value )
-   console.log("value from state", !this.state.inputValue)
-// Button is disabled when input state is empty.
-//<button disabled={!this.state.value} />
-  }
   function validate(bal, wAmt){
       if (wAmt > bal) {
         setStatus('Error: Your withdrawal amount is higher than your availble funds, please pick a lower amount');
@@ -68,9 +52,8 @@ function Withdraw(){
               <>
               Balance: ${balance}<br/>
               Withdraw<br/>
-              <input type="input" className="form-control" id="withdrawAmt" placeholder="Enter Withdrawal Amount" value={withdrawAmt} 
-              onChange={e => withdraw(e.currentTarget.value)} /><br/>
-              <button type="submit" disabled={!e.currentTarget.value} className="btn btn-light" onClick={handleSubmit}>Submit Withdrawal</button>
+              <input type="input" className="form-control" id="withdrawAmt" placeholder="Enter Withdrawal Amount" value={withdrawAmt} onChange={e => setWithdrawAmt(e.currentTarget.value)} /><br/>
+              <button type="submit" className="btn btn-light" onClick={handleSubmit}>Submit Withdrawal</button>
               </>
             ):(
               <>
@@ -81,4 +64,3 @@ function Withdraw(){
     />
   );
 }
-export default Withdraw();

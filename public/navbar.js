@@ -12,9 +12,6 @@ function NavBar(){
             <li className="nav-item">
               <a className="nav-link" href="#/CreateAccount/">Create Account</a>
             </li>
-               <li className="nav-item">
-              <a className="nav-link" href="#/login/">Login</a>
-              </li>
             <li className="nav-item">
               <a className="nav-link" href="#/deposit/">Deposit</a>
             </li>
@@ -30,4 +27,3 @@ function NavBar(){
       </>
     );
   }
-  export default NavBar();	

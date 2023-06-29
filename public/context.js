@@ -1,4 +1,3 @@
-import React,{ReactRouterDOM} from 'react';
 
 const Route       = ReactRouterDOM.Route;
 const Link        = ReactRouterDOM.Link;
@@ -25,8 +24,4 @@ function Card(props){
     );    
   }
 
-  export default Card(); 
-  export {UserContext};
-  export {Route};
-  export {Link};
-  export {HashRouter};
+
